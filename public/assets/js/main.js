@@ -1,130 +1,178 @@
-jQuery(document).ready(function ($) {
+function menu(){
+	let screenWidth = screen.width;
+	if(screenWidth < 992){
+		let item = document.getElementsByClassName("rd-nav-link");
+		let btn = document.getElementById("btn_menu");
+		let div = document.getElementById("div_menu");
+		for(let i = 0; i < item.length; i++){
+			item[i].addEventListener("click", function() {
+			event.preventDefault;
+			btn.classList.remove("active");
+			div.classList.remove("active");
+			});
+		}
+	}
+}
 
-  // Header fixed and Back to top button
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      $('.back-to-top').fadeIn('slow');
-      $('#header').addClass('header-fixed');
-    } else {
-      $('.back-to-top').fadeOut('slow');
-      $('#header').removeClass('header-fixed');
-    }
-  });
-  $('.back-to-top').click(function () {
-    $('html, body').animate({
-      scrollTop: 0
-    }, 1500, 'easeInOutExpo');
-    return false;
-  });
+function ponto_juntos(){
+	if(screen.width >= 768 && screen.width <= 991){
+	}else if(screen.width >= 768){
+		document.getElementById("bunner").style = "background-image: url(http://localhost/pethouse/public/assets/css/imgs/inicio_fundo.jpeg); background-size: cover";
+	}else{
+		 document.getElementById("bunner").style = "background-image: url(css/imgs/inicio_fundo_pequeno.jpg);background-size:cover";
+		 document.getElementById("email").style = "padding:0px;";
+		 document.getElementById("texto_email").style = "font-size:15px;";
+	}
+}
 
-  // Initiate the wowjs
-  new WOW().init();
+function mudar(id){
+	window.location.href = id;
+}
 
-  // Initiate superfish on nav menu
-  $('.nav-menu').superfish({
-    animation: {
-      opacity: 'show'
-    },
-    speed: 400
-  });
+function adicionar(){
+	let titulo = document.getElementById("titulo").value;
+	let descricao = document.getElementById("descricao").value;
+	let subtitulo = document.getElementById("subtitulo0").value;
+	let i = document.getElementById("contagem").value;
+	document.getElementById("mais"+i).hidden = true;
+	document.getElementById('check'+i).hidden = false;
+	del = document.getElementById('deletar'+i);
+	if(del != null){
+		del.hidden = true;
+	}
+	row = document.getElementById("adicionar");
+	i++;
+	let linha = "";
+	linha += 	'<div id="tudo'+i+'">'+
+				'<div class="col-md-11">'+
+				'<h3>Sub-Título:</h3><br>'+
+				'</div>'+
+				'<div class="col-md-11">'+
+				'<div class="input_conteudo" name="subtitulo'+i+'" id="subtitulo'+i+'" contenteditable></div><br><br>'+
+				'</div>'+
+				'<div class="col-md-1">'+
+				'<img src="css/imgs/deletar.png" id="deletar'+i+'" class="adicionar" alt="" style="width: 34px; height: 34px;" onclick="del_inputs()"/><img src="css/imgs/check.png" class="adicionar" alt="" style="width: 34px; height: 34px;" onclick="confirmar()" hidden /><br><br>'+
+				'</div>'+
+				'<div>'+
+				'<div class="col-md-11">'+
+				'<h5>Conteúdo:</h5><br>'+
+				'</div>'+
+				'<div class="col-md-11">'+
+				'<div class="input_conteudo" name="conteudo'+i+'" id="conteudo'+i+'" contenteditable></div>'+
+				'</div>'+
+				'<div class="col-md-1">'+
+				'<img src="css/imgs/mais.png" id="mais'+i+'" class="adicionar" alt="" style="width: 34px; height: 34px;" onclick="adicionarmais()" hidden/><img src="css/imgs/check.png" id="check'+i+'" class="adicionar" alt="" style="width: 34px; height: 34px;" onclick="confirmar()" hidden /><br><br>'+
+				'</div>'+
+				'</div>'+
+				'</div>';
+				
+			row.innerHTML += linha;   
+			document.getElementById("contagem").value = i; 
+			document.getElementById("descricao").value = descricao;
+			document.getElementById("titulo").value = titulo;
+			document.getElementById("subtitulo0").value = subtitulo;
+	
+}		
 
-  // Mobile Navigation
-  if ($('#nav-menu-container').length) {
-    var $mobile_nav = $('#nav-menu-container').clone().prop({
-      id: 'mobile-nav'
-    });
-    $mobile_nav.find('> ul').attr({
-      'class': '',
-      'id': ''
-    });
-    $('body').append($mobile_nav);
-    $('body').prepend('<button type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>');
-    $('body').append('<div id="mobile-body-overly"></div>');
-    $('#mobile-nav').find('.menu-has-children').prepend('<i class="fa fa-chevron-down"></i>');
+function confirmar(){
+	let i = document.getElementById("contagem").value;
+	document.getElementById('mais'+i).hidden = false;
+	i--;
+	document.getElementById('check'+i).hidden = true;
+	
+}
 
-    $(document).on('click', '.menu-has-children i', function (e) {
-      $(this).next().toggleClass('menu-item-active');
-      $(this).nextAll('ul').eq(0).slideToggle();
-      $(this).toggleClass("fa-chevron-up fa-chevron-down");
-    });
+function del_inputs(){
+	let i = document.getElementById("contagem").value;
+	document.getElementById('tudo'+i).remove();
+	i--;
+	document.getElementById('check'+i).hidden = true;
+	document.getElementById("mais"+i).hidden = false;
+	let deletar = document.getElementById("deletar"+i);
+	if(deletar != null){
+		deletar.hidden = false;
+	}
+	document.getElementById("contagem").value = i;
+}
 
-    $(document).on('click', '#mobile-nav-toggle', function (e) {
-      $('body').toggleClass('mobile-nav-active');
-      $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
-      $('#mobile-body-overly').toggle();
-    });
+function adicionarmais(){
+	let i = document.getElementById("contagem").value;
+	document.getElementById("deletar"+i).hidden = true;
+	adicionar();
+}
 
-    $(document).click(function (e) {
-      var container = $("#mobile-nav, #mobile-nav-toggle");
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-        if ($('body').hasClass('mobile-nav-active')) {
-          $('body').removeClass('mobile-nav-active');
-          $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
-          $('#mobile-body-overly').fadeOut();
-        }
-      }
-    });
-  } else if ($("#mobile-nav, #mobile-nav-toggle").length) {
-    $("#mobile-nav, #mobile-nav-toggle").hide();
-  }
+function sub(){
+	document.getElementById("total").value = "";
+	let texto = "";
+	let vazio_cont = false;
+	let vazio_tit = false;
+	let vazio_desc = false;
+	let image_name = document.getElementById("imagem").value;
+	let imagem_invalida = false;
+	if(image_name == ""){
+	}else{
+		var extencao = $('#imagem').val().split('.').pop().toLowerCase();
+		if(jQuery.inArray(extencao, ['gif','png','jpg','jpeg']) == -1){
+			imagem_invalida = true;
+		}
+	}
+	if(imagem_invalida == true){
+		alert("Arquivo de imagem inválido");
+		$('#image').val('');
+	}else{
+	for(i = 0;document.getElementById("conteudo"+i) != null;i++){
+		if(document.getElementById("conteudo"+i).innerHTML == ""){
+			vazio_cont = true;
+		}
+	}
+	if(document.getElementById("titulo").value == ""){
+		vazio_tit = true;
+	}
+	if(document.getElementById("descricao").value == ""){
+		vazio_desc = true;
+	}
+	if(vazio_cont == false && vazio_tit == false && vazio_desc == false){
+	for(i = 0;document.getElementById("conteudo"+i) != null;i++){
+		let texto_sub = document.getElementById("subtitulo"+i).innerHTML;
+		let texto_cont = document.getElementById("conteudo"+i).innerHTML;
+		if(texto_sub == ""){
+		texto +="<p></p><h5><p class='justify'>"+texto_cont+"</p></h5><p></p>";	
+		document.getElementById("total").value += texto;
+		}else{
+		texto += "<h3>"+texto_sub+"</h3><h5><p class='justify'>"+texto_cont+"</p></h5><p></p>";
+		document.getElementById("total").value += texto;
+		}
+	}
+	document.getElementById("formulario").submit();
+	}else{
+		if(vazio_cont == true){
+			alert("Preencha todos os campos de conteudo!!");
+		}else{
+			alert("Preencha o título e/ou a descrição!!");
+		}
+	}
+}
+    
+}
 
-  // Smoth scroll on page hash links
-  $('a[href*="#"]:not([href="#"])').on('click', function () {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+function hidden(id){
+	for(i = 0;i <= 7;i++){
+		let campo = document.getElementById("erro"+i);
+		if(campo != null){
+			campo.hidden = true;
+		}
+	}
+	document.getElementById("erro"+id).hidden = false;
+}
 
-      var target = $(this.hash);
-      if (target.length) {
-        var top_space = 0;
+function teste(){
+	document.getElementById("formulario").submit();
+}
 
-        if ($('#header').length) {
-          top_space = $('#header').outerHeight();
+function deletar(pagina, id){
+	window.location.href = "./gerenciar"+pagina+".php?deletar="+id+"?";
+}
 
-          if (!$('#header').hasClass('header-fixed')) {
-            top_space = top_space - 20;
-          }
-        }
-
-        $('html, body').animate({
-          scrollTop: target.offset().top - top_space
-        }, 1500, 'easeInOutExpo');
-
-        if ($(this).parents('.nav-menu').length) {
-          $('.nav-menu .menu-active').removeClass('menu-active');
-          $(this).closest('li').addClass('menu-active');
-        }
-
-        if ($('body').hasClass('mobile-nav-active')) {
-          $('body').removeClass('mobile-nav-active');
-          $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
-          $('#mobile-body-overly').fadeOut();
-        }
-        return false;
-      }
-    }
-  });
-
-  // Porfolio filter
-  $("#portfolio-flters li").click(function () {
-    $("#portfolio-flters li").removeClass('filter-active');
-    $(this).addClass('filter-active');
-
-    var selectedFilter = $(this).data("filter");
-    $("#portfolio-wrapper").fadeTo(100, 0);
-
-    $(".portfolio-item").fadeOut().css('transform', 'scale(0)');
-
-    setTimeout(function () {
-      $(selectedFilter).fadeIn(100).css('transform', 'scale(1)');
-      $("#portfolio-wrapper").fadeTo(300, 1);
-    }, 300);
-  });
-
-  // jQuery counterUp
-  $('[data-toggle="counter-up"]').counterUp({
-    delay: 10,
-    time: 1000
-  });
-
-  // custom code
-
-});
+function inserir(){
+	document.getElementById("formulario").submit();
+}
