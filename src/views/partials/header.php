@@ -39,7 +39,7 @@
   ============================-->
   <header id="header" style="background-color:white;">
 
-      <div id="logo" class="pull-left logo">
+      <div id="logo" class="pull-left logo" style="margin-left:200px;">
         <a href="#hero"><img src="<?=$base?>/assets/img/logo.jpeg" style="width:20%;height:20%;"></img></a>
       </div>
 
