@@ -46,8 +46,8 @@
   ============================-->
   <section id="hero">
     <div class="hero-container">
-      <h1>Welcome to Regna</h1>
-      <h2>We are team of talanted designers making websites with Bootstrap</h2>
+      <h1>Pethouse</h1>
+      <h2>O melhor lugar para seu pet!</h2>
       <a href="#about" class="btn-get-started">Get Started</a>
     </div>
   </section><!-- #hero -->
@@ -474,7 +474,7 @@
               <div id="sendmessage">Your message has been sent. Thank you!</div>
               <div id="errormessage"></div>
               <form action="" method="post" role="form" class="contactForm">
-                <div class="form-group">
+                <div class="form-group" method="POST" action="./formcontato">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validation"></div>
                 </div>
