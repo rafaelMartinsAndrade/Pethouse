@@ -21,7 +21,7 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap" id="btn_menu"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a href="index.php"><img class="brand-logo-light" src="<?=$base?>/assets/css/imgs/logo_original.jpeg" alt="" width="140" height="57"/></a></div>
+                  <div class="rd-navbar-brand"><a href="index.php"><img class="brand-logo-light" src="<?=$base?>/assets/css/imgs/logo_original.jpeg" style="margin-right: 20px;" alt="" width="140" height="57"/></a></div>
                 </div>
                   <div class="rd-navbar-nav-wrap" id="div_menu">
                     <!-- RD Navbar Nav-->
@@ -97,7 +97,7 @@
                     <div class="product-featured-button"></div>
                   </div>
                   <div class="product-featured-caption">
-                    <h4 class="CoolveticaRg">Pet sitter</h4>
+                    <h4 class="CoolveticaRg">Pet Sitter</h4>
                     <p class="big"></p>
                   </div>
                 </div>

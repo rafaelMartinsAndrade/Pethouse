@@ -17,7 +17,7 @@ function menu(){
 function ponto_juntos(){
 	if(screen.width >= 768 && screen.width <= 991){
 	}else if(screen.width >= 768){
-		document.getElementById("bunner").style = "background-image: url(http://localhost/pethouse/public/assets/css/imgs/inicio_fundo.jpeg); background-size: cover";
+		document.getElementById("bunner").style = "background-image: url(http://localhost/pethouse/public/assets/css/imgs/fundo.jpeg); background-size: cover";
 	}else{
 		 document.getElementById("bunner").style = "background-image: url(css/imgs/inicio_fundo_pequeno.jpg);background-size:cover";
 		 document.getElementById("email").style = "padding:0px;";
