@@ -1,5 +1,4 @@
-<?php $render('header'); ?>
-    <div class="ie-panel"><a href="https://www.google.com/intl/pt-BR/chrome/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="Você está usando um browser antigo. Para obter uma navegação mais rápida e segura, faça o download de graça!"></a></div>
+<?php $render('header'); ?><div class="ie-panel"><a href="https://www.google.com/intl/pt-BR/chrome/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="Você está usando um browser antigo. Para obter uma navegação mais rápida e segura, faça o download de graça!"></a></div>
     <div class="preloader">
       <div class="preloader-body">
         <div class="cssload-container">
@@ -28,7 +27,9 @@
                     <ul class="rd-navbar-nav">
                       <li class="rd-nav-item"><a class="rd-nav-link" href="blog.php">Blog</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Início</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.php">Postar</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Sair</a>
                       </li>
                     </ul>
                   </div>
@@ -39,34 +40,39 @@
       </header>
       <!-- Swiper-->
       <section class="section section-lg section-main-bunner section-main-bunner-filter text-center">
-	  	<div class="main-bunner-img" style="background-image: url(&quot;<?php if($listar->IMAGEM != "" && $listar->IMAGEM != null){echo $listar->IMAGEM;}else{echo "css/imgs/inicio_fundo.jpeg";}?>&quot;); background-size: cover;"></div>
+        <div class="main-bunner-img" style="background-image: url(&quot;css/imgs/inicio_fundo.jpeg&quot;); background-size: cover;"></div>
         <div class="main-bunner-inner">
           <div class="container">
             <div class="box-default">
-              <h1 class="box-default-title"><?php echo $listar->TITULO; ?></h1>
-              <div class="box-default-decor"></div>
-              <p class="big box-default-text"><?php echo $listar->DESCRICAO; ?></p>
-            </div>
+			  <h1 class="box-default-title CoolveticaRg">Funcionários</h1>
+			</div>
           </div>
         </div>
       </section>
       <section class="section-lg bg-default" id="blog">
         <div class="container wow-outer">
+          <!-- Owl Carousel-->
+		  <?php if($funcionarios != "" && $funcionarios != null) :?>
+			<h2 class="text-center wow slideInDown" id="">Melhores Cuidadores</h2>
 			<div class="row">
-				<?php if($listar != "") : ?>
-				<div class="col-md-1"></div>
-				<div class="col-md-10">
-				<h2><?php echo $listar->TITULO; ?></h2>
-				<p style="font-size: 20px;"><?php echo $listar->DESCRICAO; ?></p><br>
-				<div id="conteudo">
-				<?php echo $listar->CONTEUDO; ?>
-				</div>
-				</div>
-				<?php else: ?>
-					<div class="col-md-12 text-center wow slideInDown">
-						<h3>Esta postagem acabou de ser removida!!</h3>
+			<div class="col-md-1 col-lg-1"></div>
+			<div class="col-md-10 col-lg-10">
+			<div class="owl-carousel grab wow fadeInUp" id="grab" data-items="1" data-md-items="2" data-lg-items="4" data-dots="false" data-nav="false" data-stage-padding="5" data-loop="false" data-margin="5" data-mouse-drag="true">
+			<?php foreach ($funcionarios as $funcionario) : ?>
+					<div class="post-corporate">
+					  <h4 class="post-corporate-title"><a href="post.php?codigo=<?=$funcionario['id_cliente'];?>"><?=$funcionario['id_cliente']; ?></a></h4>
+					  <div class="post-corporate-text">
+						<a href="post.php?codigo=<?=$posts->ID; ?>"><p style="width: 80%;"><?=$funcionario->DESCRICAO; ?></p></a>
+					  </div><a class="post-corporate-link" href="post.php?codigo=<?=$funcionario->ID; ?>">Leia mais<span class="icon linearicons-arrow-right"></span></a>
 					</div>
-				<?php endif; ?>
+			</div>
+			</div>
+			<?php endforeach; ?>
+			<?php else: ?>
+				<div class="col-md-12 text-center wow slideInDown">
+					<h3>Nenhum cuidador foi encontrado</h3>
+				</div>
+			<?php endif; ?>
 			</div>
 		</div>
 	  </section>
