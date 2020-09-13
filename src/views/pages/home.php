@@ -21,18 +21,20 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap" id="btn_menu"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a href="index.php"><img class="brand-logo-light" src="<?=$base?>/assets/css/imgs/logo_original.jpeg" style="margin-right: 20px;" alt="" width="140" height="57"/></a></div>
+                  <div class="rd-navbar-brand"><a href="./"><img class="brand-logo-light" src="<?=$base?>/assets/css/imgs/logo_original.jpeg" style="margin-right: 20px;" alt="" width="140" height="57"/></a></div>
                 </div>
                   <div class="rd-navbar-nav-wrap" id="div_menu">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Início</a>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="./">Início</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="#sobre">Sobre</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="#servicos">Serviços</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="#contatos">Contatos</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./loginrender">Login</a>
                       </li>
                     </ul>
                   </div>
@@ -52,21 +54,21 @@
               <h3 class="box-default-title CoolveticaRg">PETHOUSE</h3>
               <label class="box-default-text">O melhor lugar para seu pet</label>
               <div class="box-default-decor"></div>
-              <a class="rd-nav-link" href="#contatos"><input class="botao" type="button" id="registrar" value="Entre em contato" onclick=""></input></a>
+              <a class="rd-nav-link" href="#contatos"><button class="botao" type="button" id="registrar">Entre em contato</button></a>
             </div>
           </div>
         </div>
       </section>
       <div class="bg-gray-1 pt-lg-10" id="sobre">
-        <section class="section section-lg section-inset-1 bg-gray-1">
+        <section class="section section-sm section-md section-lg section-xl section-inset-1 bg-gray-1">
           <div class="container">
-            <div class="row row-50 justify-content-xl-between align-items-lg-center">
-              <div class="col-xs-12 col-sm-12 col-lg-6 wow fadeInLeft" align="center">
+            <div class="row row-50 align-items-center">
+              <div class="display col-lg-6 col-xs-6 wow fadeInLeft" align="center">
                 <div class="box-image">
-				        	<img class="box-image-static" src="<?=$base?>/assets/css/imgs/sobre_img.jpg"/>
+				        	<img class="box-image-static" src="<?=$base?>/assets/css/imgs/somos4.jpeg"/>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 wow fadeInRight" style="padding-top: 25px;">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 wow fadeInRight">
                 <h2>Quem somos nós?</h2>
                 <p class="justify">A Solucione Consultoria Jurídica é a empresa júnior de Direito da Universidade Federal de Minas Gerais (UFMG). 
                 Fundada em 2016, estamos há anos nos especializando na prestação de serviços jurídicos de caráter consultivo,
@@ -79,7 +81,7 @@
         </section>
       </div>
       <!-- Featured Offers-->
-      <section class="section section-lg bg-default padding" id="servicos">
+      <section class="section section-sm section-md section-lg section-xl bg-default padding" id="servicos">
         <div class="container">
           <div class="row justify-content-center text-center">
             <div class="col-md-12 col-lg-12 wow-outer">
@@ -93,33 +95,33 @@
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 wow-outer">
               <div class="wow fadeInUp">
                 <div class="product-featured">
-                  <div class="product-featured-figure"><img src="<?=$base?>/assets/css/imgs/servicos/Const.jpeg" alt="" width="330" height="355"/>
+                  <a href="loginrender"><div class="product-featured-figure"><img src="<?=$base?>/assets/css/imgs/servicos/Const.jpeg" alt="" width="330" height="355"/>
                     <div class="product-featured-button"></div>
                   </div>
                   <div class="product-featured-caption">
                     <h4 class="CoolveticaRg">Pet Sitter</h4>
                     <p class="big"></p>
-                  </div>
+                  </div></a>
                 </div>
               </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 wow-outer">
               <div class="wow fadeInUp">
                 <div class="product-featured">
-                  <div class="product-featured-figure"><img src="<?=$base?>/assets/css/imgs/servicos/elab.jpeg" alt="" width="350" height="355"/>
+                <a href="loginrender"><div class="product-featured-figure"><img src="<?=$base?>/assets/css/imgs/servicos/elab.jpeg" alt="" width="350" height="355"/>
                     <div class="product-featured-button"></div>
                   </div>
                   <div class="product-featured-caption">
                     <h4 class="CoolveticaRg">Pet Walker</h4>
                     <p class="big"></p>
-                  </div>
+                  </div></a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="section section-lg bg-gray-1" style="padding: 210px 0px;" id="contatos">
+      <section class="section section-sm section-md section-lg section-xl bg-gray-1" id="contatos">
         <div class="container" style="margin: 0px !important;">
           <div class="row justify-content-center text-center">
             <div class="col-md-12 col-lg-12 wow-outer">
@@ -132,7 +134,7 @@
           <div class="row">
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 wow fadeInLeft">
               <div class="box-icon-classic">
-                <div class="box-icon-inner decorate-circle"><span class="icon-xl linearicons-map2"></span></div>
+                <div class="box-icon-inner "><span class="icon-xl linearicons-map2"></span></div>
                 <div class="box-icon-caption">
                   <h4><a href="https://www.google.com/maps/place/Col%C3%A9gio+COTEMIG+-+Barroca/@-19.9363346,-43.9686731,17z/data=!3m1!4b1!4m5!3m4!1s0xa6970bbf3f5be1:0x696078cc22d9d6cb!8m2!3d-19.9363346!4d-43.9664844" target="_blank">Barroca, R. Santa Cruz, 546</a></h4>
                 </div>
@@ -140,7 +142,7 @@
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 wow fadeInLeft">
               <div class="box-icon-classic">
-                <div class="box-icon-inner decorate-triangle"><span class="icon-xl fa-whatsapp"></span></div>
+                <div class="box-icon-inner"><span class="icon-xl fa-whatsapp"></span></div>
                 <div class="box-icon-caption">
                   <h4><a href="tel:#">+55 31 98920-3855</a></h4>
                   <p></p>
@@ -149,7 +151,7 @@
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 wow fadeInLeft" id="email">
               <div class="box-icon-classic">
-                <div class="box-icon-inner decorate-rectangle"><img src="<?=$base?>/assets/css/imgs/gmail.png"></div>
+                <div class="box-icon-inner"><img src="<?=$base?>/assets/css/imgs/gmail.png"></div>
                 <div class="box-icon-caption">
                   <h4 id="texto_email"><a href="mailto:pethouseatendimento@gmail.com">pethouseatendimento@gmail.com</a></h4>
                 </div>
@@ -191,27 +193,4 @@
     </div>
 	</div>
 </div>
-    <div class="snackbars" id="form-output-global"></div>
-    <script src="<?=$base?>/assets/js/core.min.js"></script>
-    <script src="<?=$base?>/assets/js/script.js"></script>
-    <script src="<?=$base?>/assets/js/main.js"></script>
-	<script>
-	window.onload = menu();
-	window.onload = ponto_juntos();
-	document.onkeydown = fkey;
-
-	var wasPressed = false;
-
-	function fkey(e){
-		e = e || window.event;
-	   if( wasPressed ) return; 
-
-		if (e.keyCode == 116) {
-		window.location.reload()
-		window.scrollTo(0, 0);
-		wasPressed = true;
-		}else{}
-	 }
-	</script>
-  </body>
-</html>
+<?php $render('footer'); ?>

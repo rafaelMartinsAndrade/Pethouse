@@ -152,14 +152,14 @@ sup {
 }
 
 a {
-	color: #41A451;
+	color:  rgb(254, 222, 0);
 	text-decoration: none;
 	background-color: transparent;
 	-webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-	color: #41A451;
+	color:  rgb(254, 222, 0);
 	text-decoration: underline;
 }
 
@@ -428,7 +428,7 @@ small,
 mark,
 .mark {
 	padding: 5px 10px;
-	background-color: #41A451;
+	background-color:  rgb(254, 222, 0);
 }
 
 .list-unstyled {
@@ -2149,12 +2149,12 @@ fieldset:disabled a.btn {
 
 .btn-link {
 	font-weight: 400;
-	color: #41A451;
+	color:  rgb(254, 222, 0);
 	background-color: transparent;
 }
 
 .btn-link:hover {
-	color: #41A451;
+	color:  rgb(254, 222, 0);
 	text-decoration: underline;
 	background-color: transparent;
 	border-color: transparent;
@@ -3925,8 +3925,8 @@ input[type="button"].btn-block {
 	z-index: 2;
 	color: #ffffff;
 	text-decoration: none;
-	background-color: #41A451;
-	border-color: #41A451;
+	background-color:  rgb(254, 222, 0);
+	border-color:  rgb(254, 222, 0);
 }
 
 .page-link:focus {
@@ -3953,8 +3953,8 @@ input[type="button"].btn-block {
 .page-item.active .page-link {
 	z-index: 1;
 	color: #ffffff;
-	background-color: #41A451;
-	border-color: #41A451;
+	background-color:  rgb(254, 222, 0);
+	border-color:  rgb(254, 222, 0);
 }
 
 .page-item.disabled .page-link {
@@ -4443,7 +4443,7 @@ button.close {
 .bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] .arrow::before {
 	top: 0;
 	border-width: 6px 3px 0;
-	border-top-color: #41A451;
+	border-top-color:  rgb(254, 222, 0);
 }
 
 .bs-tooltip-right, .bs-tooltip-auto[x-placement^="right"] {
@@ -4459,7 +4459,7 @@ button.close {
 .bs-tooltip-right .arrow::before, .bs-tooltip-auto[x-placement^="right"] .arrow::before {
 	right: 0;
 	border-width: 3px 6px 3px 0;
-	border-right-color: #41A451;
+	border-right-color:  rgb(254, 222, 0);
 }
 
 .bs-tooltip-bottom, .bs-tooltip-auto[x-placement^="bottom"] {
@@ -4473,7 +4473,7 @@ button.close {
 .bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
 	bottom: 0;
 	border-width: 0 3px 6px;
-	border-bottom-color: #41A451;
+	border-bottom-color:  rgb(254, 222, 0);
 }
 
 .bs-tooltip-left, .bs-tooltip-auto[x-placement^="left"] {
@@ -4489,7 +4489,7 @@ button.close {
 .bs-tooltip-left .arrow::before, .bs-tooltip-auto[x-placement^="left"] .arrow::before {
 	left: 0;
 	border-width: 3px 0 3px 6px;
-	border-left-color: #41A451;
+	border-left-color:  rgb(254, 222, 0);
 }
 
 .tooltip-inner {
@@ -4497,7 +4497,7 @@ button.close {
 	padding: 6px 10px;
 	color: #ffffff;
 	text-align: center;
-	background-color: #41A451;
+	background-color:  rgb(254, 222, 0);
 	border-radius: 0.25rem;
 }
 

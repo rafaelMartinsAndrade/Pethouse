@@ -15,17 +15,17 @@ class ClienteController extends Controller {
         $senha2 = filter_input(INPUT_POST, 'senha2');
         $data_nasc = filter_input(INPUT_POST, 'data_nasc');
         if($nome == "" || $email == "" || $telefone == "" || $senha == "" || $data_nasc == ""){
-            $this->render('cadcliente');
+            $this->render('registro');
             echo("<script>Swal.fire({icon: 'error',title: 'Preencha todos os campos!'})</script>");
             exit;
         }else if($senha != $senha2){
-            $this->render('cadcliente');
+            $this->render('registro');
             echo("<script>Swal.fire({icon: 'error',title: 'As senha não são iguais!'})</script>");
             exit;
         }else{
             $dataatual = date("Y/m/d");
             if(strtotime($dataatual) < strtotime($data_nasc)){
-                $this->render('cadcliente');
+                $this->render('registro');
                 echo("<script>Swal.fire({icon: 'error',title: 'Insira uma data de nascimento válida!'})</script>");
                 exit;
             }else{
@@ -44,14 +44,14 @@ class ClienteController extends Controller {
                             'email_cliente' => $email,
                             'telefone_cliente' => $telefone,
                             'senha_cliente' => md5($senha),
-                            'data_nasc_cliente' => $data_nasc,
+                            'data_nasc_cliente' => $data_nasc
                         ])->execute();
                         //Redireciona para o home.php
                         $this->redirect('./cadastrado');
 
                     }else{
-                        //Redireciona para o cadcliente.php
-                        $this->redirect('./formclienteemail');
+                        //Redireciona para o registro.php
+                        $this->redirect('./registrorender');
                     }
                 }catch(PDOException $e){
                     echo $e->getMessage();

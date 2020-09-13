@@ -28,9 +28,9 @@
                     <ul class="rd-navbar-nav">
                       <li class="rd-nav-item"><a class="rd-nav-link" href="./">Início</a>
                       </li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="./loginrender">Login</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./loginrender">Login</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="./registrorender">Registre-se</a>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="./registrorender">Registre-se</a>
                       </li>
                     </ul>
                   </div>
@@ -45,7 +45,7 @@
         <div class="main-bunner-inner">
           <div class="container">
             <div class="box-default">
-			  <h1 class="box-default-title CoolveticaRg">Faça seu login</h1>
+			  <h1 class="box-default-title CoolveticaRg">Registre-se</h1>
 			</div>
           </div>
         </div>
@@ -60,12 +60,26 @@
 								<h2>Insira seus dados</h2>
 							</div>
 							<p></p>
-							<label class="branco">Login</label>
-							<input class="form-control" id="usuario" name="usuario">
-							<label class="branco">Senha</label>
-							<input type="password" class="form-control" id="senha" name="senha">
-							<h4 id="erro1" class="vermelho" hidden>Preencha todos os campos!</h2>
-							<h4 id="erro2" class="vermelho" hidden>Usuario e/ou senha incorretos!</h2>
+								<div class="form-group">
+									<label for="nome">Nome</label>
+									<input type="text" placeholder="João Alberto Silveira" class="form-control" id="nome" name="nome" onClick="this.select();" required>
+								</div>
+								<div class="form-group">
+									<label for="email">Email</label>
+									<input type="email" placeholder="joaoalberto@gmail.com" class="form-control" id="email" name="email" onClick="this.select();" required>
+								</div>
+								<div class="form-group">
+									<label for="telefone">Telefone</label>
+									<input type="text" id="telefone" name="telefone" class="form-control" placeholder="DD XXXXX-XXXX/DD XXXX-XXXX" onClick="this.select();" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" required/>
+								</div>
+								<div class="form-group">
+									<label for="senha">Senha</label>
+									<input type="password" placeholder="********" class="form-control" id="senha1" name="senha1" onClick="this.select();" required>
+								</div>
+								<div class="form-group">
+									<label for="senha_conf">Confirme sua senha</label>
+									<input type="password" placeholder="********" class="form-control" id="senha2" name="senha2" onClick="this.select();" required>
+								</div>
 							<button class="botao login" type="submit" id="Confirmar" name="Confirmar" value="Confirmar">Confirmar</button>
 					</form>
 				</div>

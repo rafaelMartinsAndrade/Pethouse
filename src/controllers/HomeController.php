@@ -9,8 +9,12 @@ class HomeController extends Controller {
         $this->render('home');
     }
 
-    public function sobre() {
-        $this->render('sobre');
+    public function loginrender() {
+        $this->render('login');
+    }
+
+    public function registrorender() {
+        $this->render('registro');
     }
 
     public function sobreP($args) {

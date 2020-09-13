@@ -15,7 +15,7 @@
     <meta property="og:image:height" content="600">
     <meta property="og:type" content="website">
     
-    <link rel="icon" href="<?=$base?>/assets/css/imgs/icone.png" type="image/x-icon">
+    <link rel="icon" href="<?=$base?>/assets/css/imgs/logo_original.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="<?=$base?>/assets/css/bootstrap.css">
     <link rel="stylesheet" href="<?=$base?>/assets/css/fonts.css">
     <link rel="stylesheet" href="<?=$base?>/assets/css/style.css">
