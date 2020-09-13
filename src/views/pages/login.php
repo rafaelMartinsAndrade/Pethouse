@@ -61,9 +61,9 @@
 							</div>
 							<p></p>
 							<label class="branco">Login</label>
-							<input class="form-control" id="usuario" name="usuario">
+							<input type="email" placeholder="Email" class="form-control" id="email" name="email" onClick="this.select();" required>
 							<label class="branco">Senha</label>
-							<input type="password" class="form-control" id="senha" name="senha">
+									<input type="password" placeholder="********" class="form-control" id="senha" name="senha" onClick="this.select();" required>
 							<h4 id="erro1" class="vermelho" hidden>Preencha todos os campos!</h2>
 							<h4 id="erro2" class="vermelho" hidden>Usuario e/ou senha incorretos!</h2>
 							<button class="botao login" type="submit" id="Confirmar" name="Confirmar" value="Confirmar">Confirmar</button>

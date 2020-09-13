@@ -8,7 +8,7 @@ class ClienteController extends Controller {
     //insere cliente no BD
 
     public function logado() {
-        $this->render("logado/servicos");
+        $this->render("logado/inicio");
     }
 
     public function cadastrar(){
