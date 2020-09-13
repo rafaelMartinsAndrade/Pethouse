@@ -6,6 +6,11 @@ use \src\models\Cliente;
 
 class ClienteController extends Controller {
     //insere cliente no BD
+
+    public function logado() {
+        $this->render("logado/servicos");
+    }
+
     public function cadastrar(){
         $id = rand(100000, 999999);
         $nome = filter_input(INPUT_POST, 'nome');

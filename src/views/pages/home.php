@@ -70,11 +70,7 @@
               </div>
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 wow fadeInRight">
                 <h2>Quem somos nós?</h2>
-                <p class="justify">A Solucione Consultoria Jurídica é a empresa júnior de Direito da Universidade Federal de Minas Gerais (UFMG). 
-                Fundada em 2016, estamos há anos nos especializando na prestação de serviços jurídicos de caráter consultivo,
-                em especial nas áreas de Direito Empresarial, Cível e Tributário. Buscamos impactar diretamente a vida de pequenos
-                e médios empreendedores que precisam de auxílio com suas pendências jurídicas. <strong>Nossa missão é capacitar nossos membros
-                e promover uma cultura empreendedora, de forma a ampliar o acesso a serviços jurídicos de excelência.</strong></p>
+                <p class="justify">A Pet House é uma empresa que fornece um sistema de hospedagem para animais de estimação. Nossos cuidadores passam por uma seleção extremamente cuidadosa e estão 100% prontos para cuidar do seu animal de estimação!</p>
               </div>
             </div>
 			    </div>
