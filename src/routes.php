@@ -14,3 +14,4 @@ $router->get('/inicio', 'ClienteController@inicio');
 $router->get('/buscar', 'ClienteController@buscar');
 $router->get('/perfil', 'ClienteController@perfil');
 $router->get('/sair', 'ClienteController@sair');
+$router->post('/editarusuario', 'ClienteController@editarusuariorender');

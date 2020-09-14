@@ -20,7 +20,7 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap" id="btn_menu"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a href="index.php"><img class="brand-logo-light" src="<?=$base?>/assets/css/imgs/logo.png" alt=""/></a></div>
+                  <div class="rd-navbar-brand"><a href="./"><img class="brand-logo-light" src="<?=$base?>/assets/css/imgs/logo_original.jpeg" style="margin-right: 20px;" alt="" width="140" height="57"/></a></div>
                 </div>
                   <div class="rd-navbar-nav-wrap" id="div_menu">
                     <!-- RD Navbar Nav-->
@@ -111,11 +111,10 @@
 				  <div class="col-12"><a href="index.php"><img src="<?=$base?>/assets/css/imgs/logo_original.jpeg" alt="" style="padding:20px;background-color: white;border-radius: 50%;"/></a></div>
 				  <div class="col-12">
 					<ul class="footer-minimal-nav">
-					  <li><a href="index.php">Início</a></li>
-					  <li><a href="index.php#sobre">Sobre</a></li>
-					  <li><a href="index.php#servicos">Serviços</a></li>
-					  <li><a href="index.php#contatos">Contatos</a></li>
-					  <li><a href="blog.php">Blog</a></li>
+					  <li><a href="./inicio">Início</a></li>
+					  <li><a href="./buscar">Buscar</a></li>
+					  <li><a href="./perfil">Perfil</a></li>
+					  <li><a href="./sair">Sair</a></li>
 					</ul>
 				  </div>
 				  <div class="col-12">
@@ -128,7 +127,7 @@
 					</ul>
 				  </div>
 				</div>
-				<p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>Solucione</span><span>.&nbsp;</span><span>All Rights Reserved.</span><span>&nbsp;</span><a href="#">Privacy Policy</a>. Design&nbsp;by&nbsp;<a href="https://www.templatemonster.com">Rafael Martins</a></p>
+				<p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>Pethouse</span><span>.&nbsp;</span><span>All Rights Reserved.</span><span>&nbsp;</span><a href="#">Privacy Policy</a>. Design&nbsp;by&nbsp;<a href="https://www.templatemonster.com">CCAGR</a></p>
 			  </div>
 			</div>
 		  </footer>

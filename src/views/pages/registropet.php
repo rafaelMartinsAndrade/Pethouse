@@ -46,7 +46,7 @@
 			<div class="row">
 				<div class="col-md-4"></div>
 				<div class="col-md-4">
-					<form action="./login" id="formulario" method="post"  style="padding:30px;background-color: white;border: 2px solid transparent;border-radius: 20px;margin-top: 20px;">
+					<form action="./perfil" id="formulario" method="get"  style="padding:30px;background-color: white;border: 2px solid transparent;border-radius: 20px;margin-top: 20px;">
 						<div align="center">
 						<img src="<?=$base?>/assets/css/imgs/logo_completa.jpeg"></img>
 						</div>
@@ -100,11 +100,10 @@
 				  <div class="col-12"><a href="index.php"><img src="<?=$base?>/assets/css/imgs/logo_original.jpeg" alt="" style="padding:20px;background-color: white;border-radius: 50%;"/></a></div>
 				  <div class="col-12">
 					<ul class="footer-minimal-nav">
-					  <li><a href="index.php">Início</a></li>
-					  <li><a href="index.php#sobre">Sobre</a></li>
-					  <li><a href="index.php#servicos">Serviços</a></li>
-					  <li><a href="index.php#contatos">Contatos</a></li>
-					  <li><a href="blog.php">Blog</a></li>
+					  <li><a href="./inicio">Início</a></li>
+					  <li><a href="./buscar">Buscar</a></li>
+					  <li><a href="./perfil">Perfil</a></li>
+					  <li><a href="./sair">Sair</a></li>
 					</ul>
 				  </div>
 				  <div class="col-12">
@@ -117,7 +116,7 @@
 					</ul>
 				  </div>
 				</div>
-				<p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>Solucione</span><span>.&nbsp;</span><span>All Rights Reserved.</span><span>&nbsp;</span><a href="#">Privacy Policy</a>. Design&nbsp;by&nbsp;<a href="https://www.templatemonster.com">Rafael Martins</a></p>
+				<p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>Pethouse</span><span>.&nbsp;</span><span>All Rights Reserved.</span><span>&nbsp;</span><a href="#">Privacy Policy</a>. Design&nbsp;by&nbsp;<a href="https://www.templatemonster.com">CCAGR</a></p>
 			  </div>
 			</div>
 		  </footer>

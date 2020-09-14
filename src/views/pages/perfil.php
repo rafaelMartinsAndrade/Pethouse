@@ -20,7 +20,7 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap" id="btn_menu"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a href="index.php"><img class="brand-logo-light" src="<?=$base?>/assets/css/imgs/logo.png" alt=""/></a></div>
+                  <div class="rd-navbar-brand"><a href="./"><img class="brand-logo-light" src="<?=$base?>/assets/css/imgs/logo_original.jpeg" style="margin-right: 20px;" alt="" width="140" height="57"/></a></div>
                 </div>
                   <div class="rd-navbar-nav-wrap" id="div_menu">
                     <!-- RD Navbar Nav-->
@@ -40,7 +40,7 @@
           </nav>
         </div>
       </header>
-      <section class="section-lg bg-default" style="background-color: #f3e430;">
+      <section class="section-lg bg-default" style="background-color: #f3e430;margin-top:40px;">
 		  <div class="row">
 				<div class="col-md-1 col-lg-1"></div>
 				<div class="col-sm-6 col-md-5 col-lg-5" style="background-color:white;border-radius: 20px;margin-right:20px;padding:20px;">
@@ -55,12 +55,11 @@
 					<h4><?=$usuarios["TELEFONE"]?></h4>
 					<label for="telefone">CPF</label>
 					<h4><?=$usuarios["CPF"]?></h4>
-					<label for="senha">Senha</label>
-					<h4><?=$usuarios["SENHA"]?></h4>
 					<label for="senha">Forma de pagamento</label>
-					<h4><?=$usuarios["FORMA_PAG"]?></h4>
-					<button class="botao login" type="submit" id="Confirmar" name="Confirmar" value="Confirmar" style="background-color: green !important;width: 49% !important;">Editar Dados</button>
-					<button class="botao login" type="submit" id="Confirmar" name="Confirmar" value="Confirmar" style="background-color: green !important;width: 49% !important;">Cadastrar Pets</button>
+					<h4><?=$usuarios["FORMA_PAG"]?></h4><br>
+					<form action="./editarusuario" method="POST">
+					<button class="botao login" type="submit" id="Confirmar" name="Confirmar" value="Confirmar" style="background-color: green !important;">Editar Dados</button>
+					</form>
 				</div>
 			  	<div class="col-sm-6 col-md-5 col-lg-5" style="background-color:white;border-radius: 20px;padding:20px;">
 					<div align="center">
@@ -100,11 +99,10 @@
 				  <div class="col-12"><a href="index.php"><img src="<?=$base?>/assets/css/imgs/logo_original.jpeg" alt="" style="padding:20px;background-color: white;border-radius: 50%;"/></a></div>
 				  <div class="col-12">
 					<ul class="footer-minimal-nav">
-					  <li><a href="index.php">Início</a></li>
-					  <li><a href="index.php#sobre">Sobre</a></li>
-					  <li><a href="index.php#servicos">Serviços</a></li>
-					  <li><a href="index.php#contatos">Contatos</a></li>
-					  <li><a href="blog.php">Blog</a></li>
+					  <li><a href="./inicio">Início</a></li>
+					  <li><a href="./buscar">Buscar</a></li>
+					  <li><a href="./perfil">Perfil</a></li>
+					  <li><a href="./sair">Sair</a></li>
 					</ul>
 				  </div>
 				  <div class="col-12">
@@ -117,7 +115,7 @@
 					</ul>
 				  </div>
 				</div>
-				<p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>Solucione</span><span>.&nbsp;</span><span>All Rights Reserved.</span><span>&nbsp;</span><a href="#">Privacy Policy</a>. Design&nbsp;by&nbsp;<a href="https://www.templatemonster.com">Rafael Martins</a></p>
+				<p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>Pethouse</span><span>.&nbsp;</span><span>All Rights Reserved.</span><span>&nbsp;</span><a href="#">Privacy Policy</a>. Design&nbsp;by&nbsp;<a href="https://www.templatemonster.com">CCAGR</a></p>
 			  </div>
 			</div>
 		  </footer>

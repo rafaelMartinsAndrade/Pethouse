@@ -17,6 +17,10 @@ class ClienteController extends Controller {
         $this->render('registropet');
     }
 
+    public function editarusuariorender(){
+        $this->render('editarusuario');
+    }
+
     public function inicio() {
         $this->render("inicio", [
             "funcionarios" => Funcionario::listarUsuario()

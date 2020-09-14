@@ -112,7 +112,7 @@
         </div>
       </section>
       <section class="section section-sm section-md section-lg section-xl bg-gray-1" id="contatos">
-        <div class="container" style="margin: 0px !important;">
+        <div class="container" style="margin: 100px 0px;">
           <div class="row justify-content-center text-center">
             <div class="col-md-12 col-lg-12 wow-outer">
               <div class="wow slideInDown">

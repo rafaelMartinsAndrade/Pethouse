@@ -1,4 +1,5 @@
-<?php $render('header'); ?><div class="ie-panel"><a href="https://www.google.com/intl/pt-BR/chrome/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="Você está usando um browser antigo. Para obter uma navegação mais rápida e segura, faça o download de graça!"></a></div>
+<?php $render('header'); ?>
+    <div class="ie-panel"><a href="https://www.google.com/intl/pt-BR/chrome/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="Você está usando um browser antigo. Para obter uma navegação mais rápida e segura, faça o download de graça!"></a></div>
     <div class="preloader">
       <div class="preloader-body">
         <div class="cssload-container">
@@ -40,34 +41,48 @@
           </nav>
         </div>
       </header>
-	  <section class="section-lg bg-default" style="background-color: #f3e430;">
-        <div class="container wow-outer" style="margin: 4.5em 0px;">
+      <section class="section-lg bg-default" style="background-color: #f3e430;">
+        <div class="container wow-outer">
 			<div class="row">
 				<div class="col-md-4"></div>
 				<div class="col-md-4">
-					<form action="./inicio" id="formulario" method="get" style="background-color:white;border-radius: 20px;margin-right:20px;padding:20px;">
-						<div align="center">
-						<img src="<?=$base?>/assets/css/imgs/logo_original.jpeg" alt="" style="padding:20px;background-color: white;border-radius: 50%;"/>
-						<h2>Ache um cuidador</h2><br>
-						</div>
-						<label class="branco">Selecione a espécie do seu animal</label>
-						<select type="select" class="form-control" id="especie" name="especie" required>
-						<option value=""></option>
-						<option value="cachorro">Cachorro</option>
-						<option value="gato">Gato</option>
-						<option value="peixe">Peixe</option>
-						<option value="hamster">Hamster</option>
-						</select>
-						<label class="branco">Digite sua localização</label>
-						<input type="text" class="form-control" id="endereco" name="endereco" onClick="this.select();" required>
-						<button class="botao login" type="submit" id="Pesquisar" name="pesquisar" value="Pesquisar"style="background-color: green !important;">Pesquisar</button>
+					<form action="./perfil" id="formulario" method="get"  style="padding:30px;background-color: white;border: 2px solid transparent;border-radius: 20px;">
+							<div align="center">
+							<img src="<?=$base?>/assets/css/imgs/logo_completa.jpeg"></img>
+							</div>
+							<p></p>
+								<div class="form-group">
+									<label for="nome">Nome</label>
+									<input type="text" placeholder="João Alberto Silveira" class="form-control" id="nome" name="nome" onClick="this.select();" required>
+								</div>
+								<div class="form-group">
+									<label for="email">Email</label>
+									<input type="email" placeholder="joaoalberto@gmail.com" class="form-control" id="email" name="email" onClick="this.select();" required>
+								</div>
+								<div class="form-group">
+									<label for="telefone">Telefone</label>
+									<input type="text" id="telefone" name="telefone" class="form-control" placeholder="DD XXXXX-XXXX/DD XXXX-XXXX" onClick="this.select();" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" required/>
+								</div>
+								<div class="form-group">
+									<label for="telefone">CPF</label>
+									<input type="text" id="cpf" name="cpf" class="form-control" placeholder="XXX.XXX.XXX-XX" onClick="this.select();" onkeypress="" onblur="" required/>
+								</div>
+								<div class="form-group">
+									<label for="senha">Senha</label>
+									<input type="password" placeholder="********" class="form-control" id="senha1" name="senha1" onClick="this.select();" required>
+								</div>
+								<div class="form-group">
+									<label for="senha_conf">Confirme sua senha</label>
+									<input type="password" placeholder="********" class="form-control" id="senha2" name="senha2" onClick="this.select();" required>
+								</div>
+							<button class="botao login" type="submit" id="Confirmar" name="Confirmar" value="Confirmar" style="background-color: green !important;">Confirmar</button>
 					</form>
 				</div>
 			</div>
 		</div>
 	  </section>
 		<!-- Page Footer-->
-		  <footer class="section footer-minimal context-dark">
+		  <footer class="section footer-minimal context-dark ">
 			<div class="container wow-outer">
 			  <div class="wow fadeIn">
 				<div class="row row-60">
@@ -94,5 +109,4 @@
 			  </div>
 			</div>
 		  </footer>
-		</div>
-<?php $render('footer'); ?>
+		</div><?php $render('footer'); ?>
