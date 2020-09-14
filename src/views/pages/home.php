@@ -51,10 +51,10 @@
           <div class="container">
             <div class="box-default">
 			  <!-- TÍTULO -->
-              <h3 class="box-default-title CoolveticaRg">PETHOUSE</h3>
-              <label class="box-default-text">O melhor lugar para seu pet</label>
+              <h2 class="box-default-title CoolveticaRg">PETHOUSE</h2>
+              <h4 class="box-default-text">O melhor lugar para seu pet</h4>
               <div class="box-default-decor"></div>
-              <a class="rd-nav-link" href="#contatos"><button class="botao" type="button" id="registrar">Entre em contato</button></a>
+              <a class="rd-nav-link" href="./registrorender"><button class="botao" type="button" id="registrar">Registre-se</button></a><a class="rd-nav-link" href="./loginrender"><button class="botao" type="button" id="registrar">Login</button></a>
             </div>
           </div>
         </div>
@@ -91,12 +91,9 @@
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 wow-outer">
               <div class="wow fadeInUp">
                 <div class="product-featured">
-                  <div><img src="<?=$base?>/assets/css/imgs/petsitter.jpeg" alt="" width="330" height="355"/>
-                    <div class="product-featured-button"></div>
-                  </div>
+                  <a href="./loginrender"><img src="<?=$base?>/assets/css/imgs/petsitter.jpeg" alt="" width="330" height="355"/></a>
                   <div class="product-featured-caption">
                   <h4 class="CoolveticaRg"><a href="./loginrender">Pet Sitter</a></h4>
-                  <p class="big"></p>
                   </div>
                 </div>
               </div>
@@ -104,12 +101,9 @@
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 wow-outer">
               <div class="wow fadeInUp">
                 <div class="product-featured">
-                  <div><img src="<?=$base?>/assets/css/imgs/petwalker.jpeg" alt="" width="350" height="355"/>
-                  <div class="product-featured-button"></div>
-                  </div>
+                  <a href="./loginrender"><img src="<?=$base?>/assets/css/imgs/petwalker.jpeg" alt="" width="330" height="330"/></a>
                   <div class="product-featured-caption">
                   <h4 class="CoolveticaRg"><a href="./loginrender">Pet Walker</a></h4>
-                  <p class="big"></p>
                   </div>
                 </div>
               </div>

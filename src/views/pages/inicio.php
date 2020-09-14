@@ -25,13 +25,13 @@
                   <div class="rd-navbar-nav-wrap" id="div_menu">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="/inicio">Início</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./inicio">Início</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.php">Buscar</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./buscar">Buscar</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.php">Perfil</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./perfil">Perfil</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Sair</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./sair">Sair</a>
                       </li>
                     </ul>
                   </div>
@@ -42,9 +42,9 @@
       </header>
       <section class="section-lg bg-default" id="blog">
 			<div align="center">
-			<h2>Melhores Cuidadores</h2>
+			<h2>Melhores Cuidadores</h2><br>
 			</div>
-		  	<div class="owl-carousel grab wow fadeInUp" id="grab" data-items="1" data-md-items="2" data-lg-items="6" data-dots="false" data-nav="true" data-stage-padding="30px" data-loop="false" data-margin="30%" data-mouse-drag="true" style="margin: 20px 0px;">
+		  	<div class="owl-carousel grab wow fadeInUp" id="grab" data-items="1" data-md-items="2" data-lg-items="4" data-dots="false" data-nav="true" data-stage-padding="5" data-loop="false" data-margin="30%" data-mouse-drag="true" style="margin: 20px 0px;">
 			<div class="cuidador">
 					<img src="<?=$base?>/assets/css/imgs/img_avatar.png" alt="Avatar" style="width:100%;">
 					<div class="container">

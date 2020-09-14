@@ -25,11 +25,13 @@
                   <div class="rd-navbar-nav-wrap" id="div_menu">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="blog.php">Blog</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./inicio">Início</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.php">Postar</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./buscar">Buscar</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Sair</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./perfil">Perfil</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./sair">Sair</a>
                       </li>
                     </ul>
                   </div>

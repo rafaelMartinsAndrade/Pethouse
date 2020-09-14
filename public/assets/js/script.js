@@ -1016,10 +1016,6 @@
 
 						form.clearForm();
 
-						if (select.length) {
-							select.select2("val", "");
-						}
-
 						form.find('input, textarea').trigger('blur');
 
 						setTimeout(function () {
@@ -1139,20 +1135,6 @@
 		// parallax scroll
 		if($('[data-parallax-scroll]').length && !isNoviBuilder && !isMobile){
 			ParallaxScroll.init();
-		}
-
-		// Select 2
-		if ( plugins.selectFilter.length ) {
-			for ( var i = 0; i < plugins.selectFilter.length; i++ ) {
-				var select = $( plugins.selectFilter[ i ] );
-
-				select.select2( {
-					placeholder:             select.attr( 'data-placeholder' ) || null,
-					minimumResultsForSearch: select.attr( 'data-minimum-results-search' ) || Infinity,
-					containerCssClass:       select.attr( 'data-container-class' ) || null,
-					dropdownCssClass:        select.attr( 'data-dropdown-class' ) || null
-				} );
-			}
 		}
 
 		// Bootstrap Date time picker

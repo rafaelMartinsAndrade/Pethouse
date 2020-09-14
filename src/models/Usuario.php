@@ -2,6 +2,5 @@
 namespace src\models;
 use \core\Model;
 
-class funcionarios extends Model {
-
+class Usuario extends Model {
 }

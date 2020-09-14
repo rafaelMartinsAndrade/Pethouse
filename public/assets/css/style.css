@@ -417,8 +417,8 @@ p [style*='max-width'] {
 }
 
 ::-moz-selection {
-	background: #0089ff;
-	color: #ffffff;
+	background: #ffffff;
+	color: #000000;
 }
 
 .thin-title {
@@ -6835,7 +6835,7 @@ html:not(.lt-ie10) .not-animated {
 	width: 36px;
 	height: 36px;
 	margin: 0 auto;
-	border: 3px solid #265d71;
+	border: 3px solid rgb(254, 222, 0);
 	border-radius: 50%;
 	border-left-color: transparent;
 	border-bottom-color: transparent;

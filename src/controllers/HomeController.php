@@ -13,8 +13,8 @@ class HomeController extends Controller {
         $this->render('login');
     }
 
-    public function registrorender() {
-        $this->render('registro');
+    public function registrousuariorender() {
+        $this->render('registrousuario');
     }
 
     public function sobreP($args) {

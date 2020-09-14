@@ -26,11 +26,13 @@
                   <div class="rd-navbar-nav-wrap" id="div_menu">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="./">Início</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./inicio">Início</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="./loginrender">Login</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./buscar">Buscar</a>
                       </li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="./registrorender">Registre-se</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./perfil">Perfil</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./sair">Sair</a>
                       </li>
                     </ul>
                   </div>
@@ -39,48 +41,52 @@
           </nav>
         </div>
       </header>
-      <!-- Swiper
-      <section class="section section-sm section-md section-lg section-main-bunner section-main-bunner-filter text-center">
-        <div class="main-bunner-img" id="bunner"></div>
-        <div class="main-bunner-inner">
-          <div class="container">
-            <div class="box-default">
-			  <h1 class="box-default-title CoolveticaRg">Registre-se</h1>
-			</div>
-          </div>
-        </div>
-      </section>-->
       <section class="section-lg bg-default" style="background-color: #f3e430;">
         <div class="container wow-outer">
 			<div class="row">
 				<div class="col-md-4"></div>
 				<div class="col-md-4">
-					<form action="./login" id="formulario" method="post"  style="padding:30px;background-color: white;border: 2px solid transparent;border-radius: 20px;">
-							<div align="center">
-							<img src="<?=$base?>/assets/css/imgs/logo_completa.jpeg"></img>
-							</div>
-							<p></p>
-								<div class="form-group">
-									<label for="nome">Nome</label>
-									<input type="text" placeholder="João Alberto Silveira" class="form-control" id="nome" name="nome" onClick="this.select();" required>
-								</div>
-								<div class="form-group">
-									<label for="email">Email</label>
-									<input type="email" placeholder="joaoalberto@gmail.com" class="form-control" id="email" name="email" onClick="this.select();" required>
-								</div>
-								<div class="form-group">
-									<label for="telefone">Telefone</label>
-									<input type="text" id="telefone" name="telefone" class="form-control" placeholder="DD XXXXX-XXXX/DD XXXX-XXXX" onClick="this.select();" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" required/>
-								</div>
-								<div class="form-group">
-									<label for="senha">Senha</label>
-									<input type="password" placeholder="********" class="form-control" id="senha1" name="senha1" onClick="this.select();" required>
-								</div>
-								<div class="form-group">
-									<label for="senha_conf">Confirme sua senha</label>
-									<input type="password" placeholder="********" class="form-control" id="senha2" name="senha2" onClick="this.select();" required>
-								</div>
-							<button class="botao login" type="submit" id="Confirmar" name="Confirmar" value="Confirmar" style="background-color: green !important;">Confirmar</button>
+					<form action="./login" id="formulario" method="post"  style="padding:30px;background-color: white;border: 2px solid transparent;border-radius: 20px;margin-top: 20px;">
+						<div align="center">
+						<img src="<?=$base?>/assets/css/imgs/logo_completa.jpeg"></img>
+						</div>
+						<p></p>
+						<div class="form-group">
+							<label for="nome">Nome</label>
+							<input type="text" id="nome" name="nome" class="form-control" placeholder="" onClick="this.select();" required/>
+						</div>
+						<div class="form-group">
+							<label for="idade">Idade</label>
+							<input type="text" id="idade" name="idade" class="form-control" placeholder="" onClick="this.select();" required/>
+						</div>
+						<div class="form-group">
+							<label for="nome">Espécie</label>
+							<select type="select" class="form-control" id="especie" name="especie" required>
+								<option value=""></option>
+								<option value="cachorro">Cachorro</option>
+								<option value="gato">Gato</option>
+								<option value="peixe">Peixe</option>
+								<option value="hamster">Hamster</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="raca">Raça</label>
+							<input type="text" placeholder="" class="form-control" id="raca" name="raca" onClick="this.select();" required>
+						</div>
+						<div class="form-group">
+							<label for="porte">Porte</label>
+							<select type="select" class="form-control" id="porte" name="porte" required>
+								<option value=""></option>
+								<option value="pequeno">Pequeno Porte</option>
+								<option value="medio">Médio Porto</option>
+								<option value="grande">Grande Porte</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="vacinas">Vacinas</label>
+							<input type="text" class="form-control" id="vacinas" name="vacinas" onClick="this.select();" required>
+						</div>
+						<button class="botao login" type="submit" id="Confirmar" name="Confirmar" value="Confirmar" style="background-color: green !important;">Confirmar</button>
 					</form>
 				</div>
 			</div>

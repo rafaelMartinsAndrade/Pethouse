@@ -25,11 +25,13 @@
                   <div class="rd-navbar-nav-wrap" id="div_menu">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="blog.php">Blog</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./inicio">Início</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.php">Postar</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./buscar">Buscar</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Sair</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./perfil">Perfil</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./sair">Sair</a>
                       </li>
                     </ul>
                   </div>
@@ -38,50 +40,57 @@
           </nav>
         </div>
       </header>
-      <section class="section-lg bg-default" id="blog">
-        <div class="container wow-outer">
-          <!-- Owl Carousel-->
-		  <?php if($listar != "" && $listar != null) :?>
-			<h2 class="text-center wow slideInDown" id="">Postagens Recentes</h2>
-			<div class="row">
-			<!-- CONTANDO OS POSTS -->
-			<?php $i = 0;
-			foreach ($listar as $posts) {
-			$i++;
-			}?>
-			<!-- VERIFICANDO A QUANTIDADE DE POSTS -->
-			<?php if($i == 1) :?>
-				<div class="col-md-12 col-lg-12" onclick="mudar('post.php?codigo=<?php echo $posts->ID; ?>')">
-					<div class="post-corporate"><a class="badge" href="post.php?codigo=<?php echo $posts->ID; ?>"><?php echo date("d/m/Y", strtotime($posts->DATA_POST)); ?></a>
-					  <h4 class="post-corporate-title"><a href="post.php?codigo=<?php echo $posts->ID; ?>"><?php echo $posts->TITULO; ?></a></h4>
-					  <div class="post-corporate-text">
-						<a href="post.php?codigo=<?php echo $posts->ID; ?>"><p><?php echo $posts->DESCRICAO; ?></p></a>
-					  </div><a class="post-corporate-link" href="post.php?codigo=<?php echo $posts->ID; ?>">Leia mais<span class="icon linearicons-arrow-right"></span></a>
+      <section class="section-lg bg-default" style="background-color: #f3e430;">
+		  <div class="row">
+				<div class="col-md-1 col-lg-1"></div>
+				<div class="col-sm-6 col-md-5 col-lg-5" style="background-color:white;border-radius: 20px;margin-right:20px;padding:20px;">
+					<div align="center">
+						<img src="<?=$base?>/assets/css/imgs/img_icon.png" alt="" style="padding:20px;background-color: white;border-radius: 50%;"/>
 					</div>
+					<label for="nome">Nome</label>
+					<h4><?=$usuarios["NOME"]?></h4>
+					<label for="email">Email</label>
+					<h4><?=$usuarios["EMAIL"]?></h4>
+					<label for="telefone">Telefone</label>
+					<h4><?=$usuarios["TELEFONE"]?></h4>
+					<label for="telefone">CPF</label>
+					<h4><?=$usuarios["CPF"]?></h4>
+					<label for="senha">Senha</label>
+					<h4><?=$usuarios["SENHA"]?></h4>
+					<label for="senha">Forma de pagamento</label>
+					<h4><?=$usuarios["FORMA_PAG"]?></h4>
+					<button class="botao login" type="submit" id="Confirmar" name="Confirmar" value="Confirmar" style="background-color: green !important;width: 49% !important;">Editar Dados</button>
+					<button class="botao login" type="submit" id="Confirmar" name="Confirmar" value="Confirmar" style="background-color: green !important;width: 49% !important;">Cadastrar Pets</button>
 				</div>
-			<!-- SE O NUMERO DE POSTS FOR MAIOR QUE UM -->
-			<?php else: ?>
-			<div class="col-md-1 col-lg-1"></div>
-			<div class="col-md-10 col-lg-10">
-			<div class="owl-carousel grab wow fadeInUp" id="grab" data-items="1" data-md-items="2" data-lg-items="4" data-dots="false" data-nav="false" data-stage-padding="5" data-loop="false" data-margin="5" data-mouse-drag="true">
-			<?php foreach ($listar as $posts) : ?>
-					<div class="post-corporate"><a class="badge" href="post.php?codigo=<?php echo $posts->ID; ?>"><?php echo date("d/m/Y", strtotime($posts->DATA_POST)); ?></a>
-					  <h4 class="post-corporate-title"><a href="post.php?codigo=<?php echo $posts->ID; ?>"><?php echo $posts->TITULO; ?></a></h4>
-					  <div class="post-corporate-text">
-						<a href="post.php?codigo=<?php echo $posts->ID; ?>"><p style="width: 80%;"><?php echo $posts->DESCRICAO; ?></p></a>
-					  </div><a class="post-corporate-link" href="post.php?codigo=<?php echo $posts->ID; ?>">Leia mais<span class="icon linearicons-arrow-right"></span></a>
+			  	<div class="col-sm-6 col-md-5 col-lg-5" style="background-color:white;border-radius: 20px;padding:20px;">
+					<div align="center">
+						<img src="<?=$base?>/assets/css/imgs/logo_original.jpeg" alt="" style="padding:20px;background-color: white;border-radius: 50%;width: 288px;height: 243px;"/>
 					</div>
-			<?php endforeach; ?>
-			<?php endif; ?>
-			</div>
-			</div>
-			<?php else: ?>
-				<div class="col-md-12 text-center wow slideInDown">
-					<h3>Nenhuma postagem foi encontrada</h3>
+					<?php if($pets != "" && $pets != null) :?>
+					<label for="nome">Seus animais:</label>
+					<?php foreach ($pets as $pet) : ?>
+					<h4><?=$usuarios["NOME"]?></h4>
+					<label for="email">Email</label>
+					<h4><?=$usuarios["EMAIL"]?></h4>
+					<label for="telefone">Telefone</label>
+					<h4><?=$usuarios["TELEFONE"]?></h4>
+					<label for="telefone">CPF</label>
+					<h4><?=$usuarios["CPF"]?></h4>
+					<label for="senha">Senha</label>
+					<h4><?=$usuarios["SENHA"]?></h4>
+					<label for="senha">Forma de pagamento</label>
+					<h4><?=$usuarios["FORMA_PAG"]?></h4>
+					<?php endforeach; ?>
+					<button class="botao login" type="submit" id="Confirmar" name="Confirmar" value="Confirmar" style="background-color: green !important;width: 49% !important;">Editar Dados</button>
+					<button class="botao login" type="submit" id="Confirmar" name="Confirmar" value="Confirmar" style="background-color: green !important;width: 49% !important;">Cadastrar Pets</button>
+					<?php else: ?>
+					<h4>Você não cadastrou nenhum animal ainda.</h4><br>
+					<form action="./registropetrender" method="POST">
+					<button class="botao login" type="submit" id="Confirmar" name="cadastrar" value="cadastrar" style="background-color: green !important;">Cadastrar Pets</button>
+					</form>
+					<?php endif;?>
 				</div>
-			<?php endif; ?>
 			</div>
-		</div>
 	  </section>
 		<!-- Page Footer-->
 		  <footer class="section footer-minimal context-dark">

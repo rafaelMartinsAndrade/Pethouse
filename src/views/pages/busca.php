@@ -25,13 +25,13 @@
                   <div class="rd-navbar-nav-wrap" id="div_menu">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="">Início</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./inicio">Início</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.php">Buscar</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./buscar">Buscar</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.php">Perfil</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./perfil">Perfil</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Sair</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="./sair">Sair</a>
                       </li>
                     </ul>
                   </div>
@@ -40,37 +40,25 @@
           </nav>
         </div>
       </header>
-      <section class="section-lg bg-default" id="blog">
-        <div class="container wow-outer">
-          <!-- Owl Carousel-->
-		  <?php if($listar != "" && $listar != null) :?>
-			<h2 class="text-center wow slideInDown" id="">Postagens Recentes</h2>
+	  <section class="section-lg bg-default">
+        <div class="container wow-outer" style="margin: 4.5em 0px;">
 			<div class="row">
-			<!-- CONTANDO OS POSTS -->
-			<?php $i = 0;
-			foreach ($listar as $posts) {
-			$i++;
-			}?>
-			<!-- VERIFICANDO A QUANTIDADE DE POSTS -->
-			<?php if($i == 1) :?>
-				<div class="col-md-12 col-lg-12" onclick="mudar('post.php?codigo=<?php echo $posts->ID; ?>')">
-					<div class="post-corporate"><a class="badge" href="post.php?codigo=<?php echo $posts->ID; ?>"><?php echo date("d/m/Y", strtotime($posts->DATA_POST)); ?></a>
-					  <h4 class="post-corporate-title"><a href="post.php?codigo=<?php echo $posts->ID; ?>"><?php echo $posts->TITULO; ?></a></h4>
-					  <div class="post-corporate-text">
-						<a href="post.php?codigo=<?php echo $posts->ID; ?>"><p><?php echo $posts->DESCRICAO; ?></p></a>
-					  </div><a class="post-corporate-link" href="post.php?codigo=<?php echo $posts->ID; ?>">Leia mais<span class="icon linearicons-arrow-right"></span></a>
-					</div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<form action="./pesquisar" id="formulario" method="post">
+						<label class="branco">Selecione a espécie do seu animal</label>
+						<select type="select" class="form-control" id="especie" name="especie" required>
+						<option value=""></option>
+						<option value="cachorro">Cachorro</option>
+						<option value="gato">Gato</option>
+						<option value="peixe">Peixe</option>
+						<option value="hamster">Hamster</option>
+						</select>
+						<label class="branco">Digite sua localização</label>
+						<input type="text" class="form-control" id="endereco" name="endereco" onClick="this.select();" required>
+						<button class="botao login" type="submit" id="Pesquisar" name="pesquisar" value="Pesquisar"style="background-color: green !important;">Pesquisar</button>
+					</form>
 				</div>
-			<!-- SE O NUMERO DE POSTS FOR MAIOR QUE UM -->
-			<?php else: ?>
-			<?php endif; ?>
-			</div>
-			</div>
-			<?php else: ?>
-				<div class="col-md-12 text-center wow slideInDown">
-					<h3>Nenhuma postagem foi encontrada</h3>
-				</div>
-			<?php endif; ?>
 			</div>
 		</div>
 	  </section>

@@ -2,7 +2,9 @@
 namespace src\controllers;
 
 use \core\Controller;
-use \src\models\Cliente;
+use \src\models\Usuario;
+use \src\models\Funcionario;
+use \src\models\Pet;
 
 class ClienteController extends Controller {
     //insere cliente no BD
@@ -10,9 +12,15 @@ class ClienteController extends Controller {
     public function logado() {
         $this->render("inicio");
     }
+    
+    public function registropetrender(){
+        $this->render('registropet');
+    }
 
     public function inicio() {
-        $this->render("inicio");
+        $this->render("inicio", [
+            "funcionarios" => Funcionario::listarUsuario()
+        ]);
     }
 
     public function buscar() {
@@ -20,18 +28,21 @@ class ClienteController extends Controller {
     }
 
     public function perfil() {
-        $this->render("perfil");
+        $usuarios = Usuario::select()->one();
+        $this->render("perfil", [
+            "usuarios" => $usuarios,
+            "pets" => Pet::listarUsuario()
+        ]);
     }
 
     public function cadastrar(){
-        $id = rand(100000, 999999);
+        $cpf = filter_input(INPUT_POST, 'cpf');
         $nome = filter_input(INPUT_POST, 'nome');
         $email = filter_input(INPUT_POST, 'email');
         $telefone = filter_input(INPUT_POST, 'telefone');
         $senha = filter_input(INPUT_POST, 'senha1');
         $senha2 = filter_input(INPUT_POST, 'senha2');
-        $data_nasc = filter_input(INPUT_POST, 'data_nasc');
-        if($nome == "" || $email == "" || $telefone == "" || $senha == "" || $data_nasc == ""){
+        if($nome == "" || $email == "" || $telefone == "" || $senha == ""){
             $this->render('registro');
             echo("<script>Swal.fire({icon: 'error',title: 'Preencha todos os campos!'})</script>");
             exit;
@@ -48,7 +59,7 @@ class ClienteController extends Controller {
             }else{
                 try{
                     $clientes = Cliente::select()->execute();
-                    if($id==$clientes["id_cliente"]){
+                    if($id==$clientes["ID"]){
                         $id = rand(100000, 999999);
                     }
                     $data = Cliente::select()->where('email_cliente', $email)->execute();
@@ -150,5 +161,9 @@ class ClienteController extends Controller {
             '',
             'success'
           );</script>");
+    }
+
+    public function sair() {
+        $this->render("home");
     }
 }
