@@ -8,10 +8,19 @@ class ClienteController extends Controller {
     //insere cliente no BD
 
     public function logado() {
-        $funcionarios = Cliente::select("FUNCIONARIOS")->execute();
-        $this->render("inicio", [
-            'funcionarios' => $funcionarios
-        ]);
+        $this->render("inicio");
+    }
+
+    public function inicio() {
+        $this->render("inicio");
+    }
+
+    public function buscar() {
+        $this->render("busca");
+    }
+
+    public function perfil() {
+        $this->render("perfil");
     }
 
     public function cadastrar(){

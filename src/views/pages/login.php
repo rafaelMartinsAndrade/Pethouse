@@ -39,7 +39,7 @@
           </nav>
         </div>
       </header>
-      <!-- Swiper-->
+      <!-- Swiper
       <section class="section section-sm section-md section-lg section-main-bunner section-main-bunner-filter text-center">
         <div class="main-bunner-img" id="bunner"></div>
         <div class="main-bunner-inner">
@@ -49,15 +49,15 @@
 			</div>
           </div>
         </div>
-      </section>
-      <section class="section-lg bg-default" id="blog">
-        <div class="container wow-outer">
+      </section>-->
+      <section class="section-lg bg-default" id="blog" style="background-color: #f3e430;">
+        <div class="container wow-outer" style="margin: 4.5em 0px;">
 			<div class="row">
 				<div class="col-md-4"></div>
 				<div class="col-md-4">
-					<form action="./login" id="formulario" method="post">
+					<form action="./login" id="formulario" method="post" style="padding:30px;background-color: white;border: 2px solid transparent;border-radius: 20px;">
 							<div align="center">
-								<h2>Insira seus dados</h2>
+							<img src="<?=$base?>/assets/css/imgs/logo_completa.jpeg"></img>
 							</div>
 							<p></p>
 							<label class="branco">Login</label>
@@ -66,7 +66,8 @@
 									<input type="password" placeholder="********" class="form-control" id="senha" name="senha" onClick="this.select();" required>
 							<h4 id="erro1" class="vermelho" hidden>Preencha todos os campos!</h2>
 							<h4 id="erro2" class="vermelho" hidden>Usuario e/ou senha incorretos!</h2>
-							<button class="botao login" type="submit" id="Confirmar" name="Confirmar" value="Confirmar">Confirmar</button>
+							<button class="botao login" type="submit" id="Confirmar" name="registro" value="Confirmar" style="background-color: #00b2ff !important;width:49% !important;">Registre-se</button>
+							<button class="botao login" type="submit" id="Confirmar" name="Confirmar" value="Confirmar"style="background-color: green !important;width:49% !important;">Confirmar</button>
 					</form>
 				</div>
 			</div>
@@ -77,7 +78,7 @@
 			<div class="container wow-outer">
 			  <div class="wow fadeIn">
 				<div class="row row-60">
-				  <div class="col-12"><a href="index.php"><img src="css/imgs/logo.png" alt="" width="140" height="57"/></a></div>
+				  <div class="col-12"><a href="index.php"><img src="<?=$base?>/assets/css/imgs/logo_original.jpeg" alt="" style="padding:20px;background-color: white;border-radius: 50%;"/></a></div>
 				  <div class="col-12">
 					<ul class="footer-minimal-nav">
 					  <li><a href="index.php">Início</a></li>

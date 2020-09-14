@@ -70,7 +70,7 @@
               </div>
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 wow fadeInRight">
                 <h2>Quem somos nós?</h2>
-                <p class="justify">A Pet House é uma empresa que fornece um sistema de hospedagem para animais de estimação. Nossos cuidadores passam por uma seleção extremamente cuidadosa e estão 100% prontos para cuidar do seu animal de estimação!</p>
+                <p class="justify">A Pet House é uma empresa que fornece um sistema de hospedagem para animais de estimação. Nossos cuidadores passam por uma seleção extremamente cuidadosa e estão 100% prontos para cuidar do seu pet!</p>
               </div>
             </div>
 			    </div>
@@ -91,26 +91,26 @@
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 wow-outer">
               <div class="wow fadeInUp">
                 <div class="product-featured">
-                  <a href="loginrender"><div class="product-featured-figure"><img src="<?=$base?>/assets/css/imgs/servicos/Const.jpeg" alt="" width="330" height="355"/>
+                  <div><img src="<?=$base?>/assets/css/imgs/petsitter.jpeg" alt="" width="330" height="355"/>
                     <div class="product-featured-button"></div>
                   </div>
                   <div class="product-featured-caption">
-                    <h4 class="CoolveticaRg">Pet Sitter</h4>
-                    <p class="big"></p>
-                  </div></a>
+                  <h4 class="CoolveticaRg"><a href="./loginrender">Pet Sitter</a></h4>
+                  <p class="big"></p>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 wow-outer">
               <div class="wow fadeInUp">
                 <div class="product-featured">
-                <a href="loginrender"><div class="product-featured-figure"><img src="<?=$base?>/assets/css/imgs/servicos/elab.jpeg" alt="" width="350" height="355"/>
-                    <div class="product-featured-button"></div>
+                  <div><img src="<?=$base?>/assets/css/imgs/petwalker.jpeg" alt="" width="350" height="355"/>
+                  <div class="product-featured-button"></div>
                   </div>
                   <div class="product-featured-caption">
-                    <h4 class="CoolveticaRg">Pet Walker</h4>
-                    <p class="big"></p>
-                  </div></a>
+                  <h4 class="CoolveticaRg"><a href="./loginrender">Pet Walker</a></h4>
+                  <p class="big"></p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -159,7 +159,7 @@
         <div class="container wow-outer">
           <div class="wow fadeIn">
             <div class="row row-60">
-              <div class="col-12"><a href="index.php"><img src="<?=$base?>/assets/css/imgs/logo.png" alt="" width="140" height="57"/></a></div>
+              <div class="col-12"><a href="index.php"><img src="<?=$base?>/assets/css/imgs/logo_original.jpeg" alt="" style="padding:20px;background-color: white;border-radius: 50%;"/></a></div>
               <div class="col-12">
                 <ul class="footer-minimal-nav">
                   <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Início</a>
@@ -169,6 +169,8 @@
                   <li class="rd-nav-item"><a class="rd-nav-link" href="#servicos">Serviços</a>
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="#contatos">Contatos</a>
+                  </li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="./loginrender">Login</a>
                   </li>
                 </ul>
               </div>

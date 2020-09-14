@@ -20,14 +20,16 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap" id="btn_menu"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a href="index.php"><img class="brand-logo-light" src="css/imgs/logo.png" alt="" width="140" height="57"/></a></div>
+                  <div class="rd-navbar-brand"><a href="index.php"><img class="brand-logo-light" src="<?=$base?>/assets/css/imgs/logo.png" alt=""/></a></div>
                 </div>
                   <div class="rd-navbar-nav-wrap" id="div_menu">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="blog.php">Blog</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="/inicio">Início</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.php">Postar</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.php">Buscar</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.php">Perfil</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Sair</a>
                       </li>
@@ -38,50 +40,75 @@
           </nav>
         </div>
       </header>
-      <!-- Swiper-->
-      <section class="section section-lg section-main-bunner section-main-bunner-filter text-center">
-        <div class="main-bunner-img" style="background-image: url(&quot;css/imgs/inicio_fundo.jpeg&quot;); background-size: cover;"></div>
-        <div class="main-bunner-inner">
-          <div class="container">
-            <div class="box-default">
-			  <h1 class="box-default-title CoolveticaRg">Funcionários</h1>
-			</div>
-          </div>
-        </div>
-      </section>
       <section class="section-lg bg-default" id="blog">
-        <div class="container wow-outer">
-          <!-- Owl Carousel-->
-		  <?php if($funcionarios != "" && $funcionarios != null) :?>
-			<h2 class="text-center wow slideInDown" id="">Melhores Cuidadores</h2>
-			<div class="row">
-			<div class="col-md-1 col-lg-1"></div>
-			<div class="col-md-10 col-lg-10">
-			<div class="owl-carousel grab wow fadeInUp" id="grab" data-items="1" data-md-items="2" data-lg-items="4" data-dots="false" data-nav="false" data-stage-padding="5" data-loop="false" data-margin="5" data-mouse-drag="true">
-			<?php foreach ($funcionarios as $funcionario) : ?>
-					<div class="post-corporate">
-					  <h4 class="post-corporate-title"><a href="post.php?codigo=<?=$funcionario['id_cliente'];?>"><?=$funcionario['id_cliente']; ?></a></h4>
-					  <div class="post-corporate-text">
-						<a href="post.php?codigo=<?=$posts->ID; ?>"><p style="width: 80%;"><?=$funcionario->DESCRICAO; ?></p></a>
-					  </div><a class="post-corporate-link" href="post.php?codigo=<?=$funcionario->ID; ?>">Leia mais<span class="icon linearicons-arrow-right"></span></a>
+			<div align="center">
+			<h2>Melhores Cuidadores</h2>
+			</div>
+		  	<div class="owl-carousel grab wow fadeInUp" id="grab" data-items="1" data-md-items="2" data-lg-items="6" data-dots="false" data-nav="true" data-stage-padding="30px" data-loop="false" data-margin="30%" data-mouse-drag="true" style="margin: 20px 0px;">
+			<div class="cuidador">
+					<img src="<?=$base?>/assets/css/imgs/img_avatar.png" alt="Avatar" style="width:100%;">
+					<div class="container">
+						<h4><b>John Doe</b></h4> 
+						<p>Architect & Engineer</p> 
 					</div>
-			</div>
-			</div>
-			<?php endforeach; ?>
-			<?php else: ?>
-				<div class="col-md-12 text-center wow slideInDown">
-					<h3>Nenhum cuidador foi encontrado</h3>
 				</div>
-			<?php endif; ?>
+				<div class="cuidador">
+					<img src="<?=$base?>/assets/css/imgs/img_avatar.png" alt="Avatar" style="width:100%">
+					<div class="container">
+						<h4><b>John Doe</b></h4> 
+						<p>Architect & Engineer</p> 
+					</div>
+				</div>
+				<div class="cuidador">
+					<img src="<?=$base?>/assets/css/imgs/img_avatar.png" alt="Avatar" style="width:100%">
+					<div class="container">
+						<h4><b>John Doe</b></h4> 
+						<p>Architect & Engineer</p> 
+					</div>
+				</div>
+				<div class="cuidador">
+					<img src="<?=$base?>/assets/css/imgs/img_avatar.png" alt="Avatar" style="width:100%">
+					<div class="container">
+						<h4><b>John Doe</b></h4> 
+						<p>Architect & Engineer</p> 
+					</div>
+				</div>
+				<div class="cuidador">
+					<img src="<?=$base?>/assets/css/imgs/img_avatar.png" alt="Avatar" style="width:100%">
+					<div class="container">
+						<h4><b>John Doe</b></h4> 
+						<p>Architect & Engineer</p> 
+					</div>
+				</div>
+				<div class="cuidador">
+					<img src="<?=$base?>/assets/css/imgs/img_avatar.png" alt="Avatar" style="width:100%">
+					<div class="container">
+						<h4><b>John Doe</b></h4> 
+						<p>Architect & Engineer</p> 
+					</div>
+				</div>
+				<div class="cuidador">
+					<img src="<?=$base?>/assets/css/imgs/img_avatar.png" alt="Avatar" style="width:100%">
+					<div class="container">
+						<h4><b>John Doe</b></h4> 
+						<p>Architect & Engineer</p> 
+					</div>
+				</div>
+				<div class="cuidador">
+					<img src="<?=$base?>/assets/css/imgs/img_avatar.png" alt="Avatar" style="width:100%">
+					<div class="container">
+						<h4><b>John Doe</b></h4> 
+						<p>Architect & Engineer</p> 
+					</div>
+				</div>
 			</div>
-		</div>
 	  </section>
 		<!-- Page Footer-->
 		  <footer class="section footer-minimal context-dark">
 			<div class="container wow-outer">
 			  <div class="wow fadeIn">
 				<div class="row row-60">
-				  <div class="col-12"><a href="index.php"><img src="css/imgs/logo.png" alt="" width="140" height="57"/></a></div>
+				  <div class="col-12"><a href="index.php"><img src="<?=$base?>/assets/css/imgs/logo_original.jpeg" alt="" style="padding:20px;background-color: white;border-radius: 50%;"/></a></div>
 				  <div class="col-12">
 					<ul class="footer-minimal-nav">
 					  <li><a href="index.php">Início</a></li>

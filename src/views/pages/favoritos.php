@@ -20,7 +20,7 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap" id="btn_menu"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a href="index.php"><img class="brand-logo-light" src="css/imgs/logo.png" alt="" width="140" height="57"/></a></div>
+                  <div class="rd-navbar-brand"><a href="index.php"><img class="brand-logo-light" src="<?=$base?>/assets/css/imgs/logo.png" alt=""/></a></div>
                 </div>
                   <div class="rd-navbar-nav-wrap" id="div_menu">
                     <!-- RD Navbar Nav-->
@@ -38,17 +38,6 @@
           </nav>
         </div>
       </header>
-      <!-- Swiper-->
-      <section class="section section-lg section-main-bunner section-main-bunner-filter text-center">
-        <div class="main-bunner-img" style="background-image: url(&quot;css/imgs/inicio_fundo.jpeg&quot;); background-size: cover;"></div>
-        <div class="main-bunner-inner">
-          <div class="container">
-            <div class="box-default">
-			  <h1 class="box-default-title CoolveticaRg">Nosso Blog</h1>
-			</div>
-          </div>
-        </div>
-      </section>
       <section class="section-lg bg-default" id="blog">
         <div class="container wow-outer">
           <!-- Owl Carousel-->
@@ -99,7 +88,7 @@
 			<div class="container wow-outer">
 			  <div class="wow fadeIn">
 				<div class="row row-60">
-				  <div class="col-12"><a href="index.php"><img src="css/imgs/logo.png" alt="" width="140" height="57"/></a></div>
+				<div class="col-12"><a href="index.php"><img src="<?=$base?>/assets/css/imgs/logo_original.jpeg" alt="" style="padding:20px;background-color: white;border-radius: 50%;"/></a></div>
 				  <div class="col-12">
 					<ul class="footer-minimal-nav">
 					  <li><a href="index.php">Início</a></li>
